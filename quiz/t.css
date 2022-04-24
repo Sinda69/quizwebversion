@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #0b0d1c;
+    color: aliceblue;
+}
+.wrapp{
+    overflow: hidden;
+    max-width: 390px;
+    background: #222645;
+    padding:30px ;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+.wrapp .titre{
+    display: flex;
+    width: 200%;
+}
+.wrapp .titre .log{
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+
+}
+.wrapp .titre .sign{
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+
+}
+.wrapp .form{
+    width: 100%;
+    overflow: hidden;
+}
+.form .slides{
+    position: relative;
+    display: flex;
+    height:50px;
+    width: 100%;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.slides .slide{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition:all 0.6s ease;
+}
+
+.slides .slide-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    background: -webkit-linear-gradient(left,#05c5db,#5420f1) ;
+    border-radius:5px ;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+    display: none;
+}
+#sign:checked ~ .slide-tab{
+    left: 50%;
+}
+
+.form .inner{
+    display: flex;
+    width: 200%;
+}
+.form .inner form{
+    width:50% ;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+
+}
+.inner form .f{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.inner form .f input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+.inner form .f input:focus{
+    border-color: #0c9ce3;
+}
+.inner form .link{
+    margin-top: 5px;   
+}
+.inner form .link a,
+.inner form .l a{
+    color:#05c5db;
+    text-decoration: none;
+}
+.inner form .l{
+    text-align: center;
+    margin-top: 30px;
+}
+.inner form .link a:hover,
+.inner form .l a:hover{
+    text-decoration: underline;
+}
+form .f input[type="submit"]{
+    color: aliceblue;
+    background: -webkit-linear-gradient(left,#05c5db,#5420f1);
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    border:none ;
+    cursor: pointer;
+
+}

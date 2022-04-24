@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #0b0d1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+}
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px ;
+    border-radius:50% ;
+    background: linear-gradient(45deg,transparent,transparent 40%,#5420f1,#05c5db);
+    animation: animate 2s linear infinite;
+    margin: 15px;
+    grid-area: overlap;
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.loader:before{
+    content: '' ;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #0b0d1c;
+    border-radius: 50%;
+    z-index: 1000;
+    
+}
+.loader:after{
+    content: '' ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(45deg,transparent,transparent 40%,#5420f1,#05c5db);
+    border-radius: 50%;
+    z-index: 1000;
+    z-index: 1;
+    filter: blur(30px);
+}
+.b{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
+}
+a{
+    border: none;
+    color: aliceblue;
+    background: #0b0d1c;
+    grid-area: overlap;
+    align-self: center;
+    position: relative;
+    justify-self: center;
+    text-decoration: none ;
+
+}

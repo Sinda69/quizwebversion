@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href="t1.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!-- box d'info -->
+  <div class="start_btn"><button>Commencer le Quiz</button></div>
+  <div class="info_box">
+      <div class="info_title"><span>Les régles du jeu</span></div>
+      <div class="info_list">
+          <div class="info">1.Vous avez <span>15 secondes</span> pour répondre</div>
+          <div class="info">2.Une fois la réponse est cochée vous ne pouvez pas changer votre réponse</div>
+          <div class="info">3.Une fois le temps est achevé vous ne pouvez plus repondre</div>
+          <div class="info">4.Vous ne pouvez pas quitter en plein milieu du jeu</div>
+          <div class="info">5.Vous allez accumuler des points sur chaque réponse correcte</div>
+      </div>
+      <div class="buttons">
+          <button class="quit">Quitter</button>
+          <button class="restart">Commencer</button>
+      </div>
+  </div>
+  <!-- box de questions -->
+ <div class="quiz_box">
+    <header>
+        <div class="title">HTML/CASS</div>
+        <div class="timer">
+            <div class="time_left_txt">Temps restant</div>
+            <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+    </header>
+    <section>
+        <div class="que_text">
+            <span>1. HTML est considéré comme ______ ?</span>
+        </div>
+        <div class="option_list">
+            <div class="option">
+                <span>Langage de programmation</span>
+                <div class="icon tick"><i class="fas fa-check"></i></div>
+            </div>
+            <div class="option">
+                <span>Langage POO</span>
+                <div class="icon cross"><i class="fa fa-times"></i></div>
+            </div>
+            <div class="option">
+                <span>Langage de haut niveau</span>
+            </div>
+            <div class="option">
+                <span>Langage de balisage</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="total_que">
+            <span><p>1</p>question sur<p>5</p></span>
+        </div>
+        <button class="next_btn">Question suivante</button>
+    </footer>
+ </div>
+  <!--result box-->
+  <div class="result_box">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
+    </div>
+    <div class="complete_text">Quiz terminé</div>
+    <div class="score_text">
+        <span>Désolé, vous n'avez accumulé que<p>2</p>points</span>
+    </div>
+    <div class="buttons">
+        <button class="restart">Recommencer</button>
+        <button class="quit">Quitter</button>
+    </div>
+</div>
+<script src="questions2.js"></script>
+<script src="script.js"></script>
+  
+  
+</body>
+</html>

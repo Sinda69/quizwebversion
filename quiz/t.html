@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href="t.css"/>
+</head>
+<body>
+    <div class="wrapp">
+        <div class="titre">
+            <div class="log">Connexion</div>
+            <div class="sign">Inscription</div>
+        </div>
+        
+        <div class="form">
+            <div class="slides">
+            <input type="radio" name="slider" id="login" checked>
+            <input type="radio" name="slider" id="sign">
+            <label for="login" class="slide login">Connexion</label>
+            <label for="sign" class="slide sign">Inscription</label>
+            <div class="slide-tab"></div>
+            </div>
+            <div class="inner">
+                <form action="val.php" class="logg" method="post">
+                    <div class="f">
+                        <input type="email" placeholder="@ email"  name="user" required>
+                    </div>
+                    <div class="f">
+                        <input type="password" placeholder="mot de passe" name="pass" required>
+                    </div>
+                    <div class="link"><a href="">Mot de passe oublié?</a></div>
+                    <div class="f">
+                        <input type="submit" value="Connexion" onclick="B()">
+                    </div>
+                    <div class="l">Pas un membre? <a href="">Inscription</a></div>
+                    
+
+                </form>
+                <form action="log.php" class="signn" method="post">
+                    <div class="f">
+                        <input type="email" placeholder="@ Email" name="user" required>
+                    </div>
+                    <div class="f">
+                        <input type="password" placeholder="Mot de passe"  name="pass" required>
+                    </div>
+                    <div class="f">
+                        <input type="password" placeholder="Confirmez votre mot de passe" required>
+                        
+                    </div>
+                    <div class="f">
+                        <input type="submit" value="Inscription" onclick="B()">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const loginform=document.querySelector("form.logg");
+        const signform=document.querySelector("form.signn");
+        const loginbutton=document.querySelector("label.login");
+        const signbutton=document.querySelector("label.sign");
+        const signlink=document.querySelector(".l a");
+        const logintext=document.querySelector(".titre .log");
+        const signtext=document.querySelector(".titre .sign");
+        
+        signbutton.onclick =(()=>{
+            loginform.style.marginLeft="-50%";
+            logintext.style.marginLeft="-50%";
+        });
+        loginbutton.onclick =(()=>{
+            loginform.style.marginLeft="0%";
+            logintext.style.marginLeft="0%";
+        });
+        signlink.onclick =(()=>{
+            signbutton.click();
+            return false;
+        });
+        function B(){
+            alert("Bienvenue");
+        }
+    </script>
+</body>
+</html>
